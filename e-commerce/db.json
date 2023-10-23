@@ -42,6 +42,14 @@
       "id": 2
     },
     {
+      "username": "admin",
+      "mobile": "27",
+      "email": "rerebobyb@mailinator.com",
+      "password": "2",
+      "role_id": 3,
+      "id": 166
+    },
+    {
       "username": "test",
       "email": "dedameta@gmailinator.com",
       "password": "123",
@@ -836,6 +844,96 @@
       "email": "raxitrangadiya@gmail.com",
       "role_id": 2,
       "id": 160
+    },
+    {
+      "username": "badipe",
+      "email": "qubi@mailinator.com",
+      "password": "Asperiores voluptas ",
+      "role_id": 3,
+      "id": 161
+    },
+    {
+      "username": "luwuqiw",
+      "email": "magosudyxa@mailinator.com",
+      "password": "Adipisicing laborios",
+      "role_id": 2,
+      "id": 162
+    },
+    {
+      "mobile": "9408850307",
+      "role_id": 3,
+      "id": 163
+    },
+    {
+      "username": "pysazem",
+      "email": "jitacarus@mailinator.com",
+      "password": "Et adipisci consequa",
+      "role_id": 2,
+      "id": 164
+    },
+    {
+      "username": "gixoqyko",
+      "mobile": "853",
+      "email": "rylos@mailinator.com",
+      "password": "Maiores minima nobis",
+      "role_id": 2,
+      "id": 165
+    },
+    {
+      "role_id": 3,
+      "id": 167
+    },
+    {
+      "role_id": 3,
+      "id": 168
+    },
+    {
+      "role_id": 3,
+      "id": 169
+    },
+    {
+      "username": "qafuqaqyxi",
+      "mobile": "328",
+      "email": "lopujy@mailinator.com",
+      "password": "Praesentium voluptat",
+      "role_id": 3,
+      "id": 170
+    },
+    {
+      "role_id": 3,
+      "id": 171
+    },
+    {
+      "username": "nn",
+      "mobile": "weef````",
+      "email": "xc",
+      "password": "12",
+      "role_id": 3,
+      "id": 172
+    },
+    {
+      "username": "qibefotuh",
+      "mobile": "660",
+      "email": "bacyd@mailinator.com",
+      "password": "Quia neque fugiat qu",
+      "role_id": 3,
+      "id": 173
+    },
+    {
+      "username": "cegopo",
+      "mobile": "maxozu",
+      "email": "purocyda@mailinator.com",
+      "password": "Sit debitis in porr",
+      "role_id": 3,
+      "id": 174
+    },
+    {
+      "username": "famisixoh",
+      "mobile": "285",
+      "email": "mafonyha@mailinator.com",
+      "password": "Quas qui enim nobis ",
+      "role_id": 3,
+      "id": 175
     }
   ]
 }

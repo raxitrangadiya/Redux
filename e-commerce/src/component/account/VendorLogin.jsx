@@ -9,7 +9,7 @@ import { useCookies } from 'react-cookie';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = () => {
+const VendorLogin = () => {
   const dispatch = useDispatch()
   const { handleChange,inp} = CustomHooks();
   const [cookies,setcookies]=useCookies(["name"])
@@ -20,18 +20,25 @@ const Login = () => {
       autoClose:700
     })
   } 
+  const showToastMessagereg  = () =>{
+    toast.warning('please register first',{
+      position:toast.POSITION.TOP_CENTER,
+      autoClose:700
+    })
+  } 
   const Loginbutoon =async(event)=>{
 
     let responce= await dispatch(loginUsers(inp.username,inp.password))
     let getdata =responce.payload.data[0]
-    showToastMessage()
-    if (responce.payload.data[0].role_id==1) {
+    if (responce.payload.data[0].role_id==3) {
+      showToastMessage()
       setTimeout(() => {
-        navigate("/admin/dashboard/admindashboard")
-    }, 1500);
-  } else {
+        navigate("/vendor/dashboard")
+      }, 1500);
+    } else {
+    showToastMessagereg()
     setTimeout(() => {
-      navigate("/")    
+      navigate("/vendorregister")    
   }, 1500);
   }
   }
@@ -90,4 +97,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default VendorLogin;

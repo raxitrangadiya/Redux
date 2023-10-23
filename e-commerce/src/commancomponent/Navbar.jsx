@@ -21,7 +21,7 @@ export default function App() {
     const [showBasic, setShowBasic] = useState(false);
 
     return (
-        <MDBNavbar expand='lg' light className='text-light' bgColor='dark'>
+        <MDBNavbar expand='lg' light className='text-light' bgColor='light'>
             <MDBContainer fluid>
                 <MDBNavbarBrand href='#'><img src="images/logo.png" alt="" /></MDBNavbarBrand>
 
@@ -38,12 +38,12 @@ export default function App() {
                     <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                         <MDBNavbarItem>
                             <MDBNavbarLink active aria-current='page' href='#'>
-                                <Link className='text-light' to="/">Home</Link>
+                                <Link className='text-dark' to="/">Home</Link>
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
                             <MDBNavbarLink>
-                                <Link className='text-light' to='/category'>Category</Link>
+                                <Link className='text-dark' to='/category'>Category</Link>
                                 </MDBNavbarLink>
                         </MDBNavbarItem>
 
@@ -56,23 +56,24 @@ export default function App() {
                     </form>
                     <MDBNavbarItem className='me-3 me-lg-0 d-block'>
                         <MDBNavbarLink href='#'>
-                            <MDBIcon className=' mt-2' fas icon='shopping-cart' />
+                            <MDBIcon className=' mt-2 text-dark' fas icon='shopping-cart' />
                         </MDBNavbarLink>
                     </MDBNavbarItem>
 
                     <MDBNavbarItem className='me-3 mx-3 me-lg-0 d-block'>
                         <MDBNavbarLink href='#'>
-                            <MDBIcon className=' mt-2' fas icon='bell' />
+                            <MDBIcon className=' mt-2 text-dark' fas icon='bell' />
                         </MDBNavbarLink>
                     </MDBNavbarItem>
                     <MDBDropdown className='mx-5'>
-                        <MDBDropdownToggle tag='a' className='nav-link ' role='button'>
-                            <MDBIcon fas icon="user-alt fa-fw me-3" /><span className='fs-5'>Users</span>
+                        <MDBDropdownToggle   tag='a' className='nav-link ' role='button'>
+                            <MDBIcon fas icon="user-alt fa-fw me-3 text-dark" /><span className='fs-5 text-dark'>Users</span>
                         </MDBDropdownToggle>
-                        <MDBDropdownMenu>
-                            <MDBDropdownItem link ><Link className='text-success fs-4' to='/login'>Login</Link></MDBDropdownItem>
-                            <MDBDropdownItem link ><Link className='text-success fs-4' to='/register'>Signup</Link></MDBDropdownItem>
-                            <MDBDropdownItem link ><Link className='text-danger fs-4' to='/login'>Help 24&times;7</Link></MDBDropdownItem>
+                        <MDBDropdownMenu className=''>
+                            <MDBDropdownItem link ><Link className='text-dark fs-5' to='/login'>Login</Link></MDBDropdownItem>
+                            <MDBDropdownItem link ><Link className='text-dark fs-5' to='/register'>Registration</Link></MDBDropdownItem>
+                            <MDBDropdownItem link ><Link className='text-dark fs-5' to='/becomevendor'>Become seller</Link></MDBDropdownItem>
+                            <MDBDropdownItem link ><Link className='text-danger fs-5' to='/login'>Help 24&times;7</Link></MDBDropdownItem>
                         </MDBDropdownMenu>
                     </MDBDropdown>
                 </MDBCollapse>

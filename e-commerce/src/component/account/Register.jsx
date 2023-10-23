@@ -28,7 +28,7 @@ const showToastMessagefailed  = () =>{
   const { handleChange, inp } = CustomHooks()
   const Registration = async () => {
     console.log("input ", inp);
-    const registerationwithRollid = { ...inp, role_id: 2 }
+    const registerationwithRollid = { ...inp, role_id: 3 }
     let RegistrationData = await dispatch(RegisterUsers(registerationwithRollid))
     if (inp == undefined) {
       showToastMessagefailed()
@@ -78,6 +78,9 @@ const showToastMessagefailed  = () =>{
 
                         <div className="form-outline mb-4">
                           <MDBInput name="username" onChange={handleChange} label='Username' id='typeText' type='text' />
+                        </div>
+                        <div className="form-outline mb-4">
+                          <MDBInput name="mobile" onChange={handleChange} label='Mobile no' id='number' type='mobile' />
                         </div>
                         <div className="form-outline mb-4">
                           <MDBInput name='email' onChange={handleChange} label='Email' id='email' type='email' />

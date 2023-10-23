@@ -4,42 +4,43 @@ import { MDBBtn, MDBIcon, MDBTable, MDBTableHead, MDBTableBody, MDBModal, MDBMod
 import axios from 'axios';
 
 const UsersAdmin = () => {
-  const [apiData, setapiData] = useState();
+  // const [apiData, setapiData] = useState();
   const [basicModal, setBasicModal] = useState(false);
   const toggleShow = () => setBasicModal(!basicModal);
-  useEffect(() => {
-    axios.get(`http://localhost:3004/users`)
-      .then(function (result) {
-        console.log("result ", result);
-        let ApiList = Object.entries(result.data).map(([key, val], index) => {
-          return <tr><td key={key}>
-            <div className='d-flex align-items-center'>
-              <div className='bg-dark' >
-                <td className='bg-light'>{key}</td>
-              </div>
-            </div>
-          </td>
-            <td>{val.username}</td>
-            <td>{val.email}</td>
-            <td>
+  
+  // useEffect(() => {
+  //   axios.get(`http://localhost:3004/users`)
+  //     .then(function (result) {
+  //       console.log("result ", result);
+  //       let ApiList = Object.entries(result.data).map(([key, val], index) => {
+  //         return <tr><td key={key}>
+  //           <div className='d-flex align-items-center'>
+  //             <div className='bg-dark' >
+  //               <td className='bg-light'>{key}</td>
+  //             </div>
+  //           </div>
+  //         </td>
+  //           <td>{val.username}</td>
+  //           <td>{val.email}</td>
+  //           <td>
 
-              <MDBBtn  onClick={toggleShow} color='success' rounded size='sm'>
-                <MDBIcon far icon="edit" />
-              </MDBBtn>
-              &nbsp;&nbsp;
-              <MDBBtn color='danger' rounded size='sm'>
-                <MDBIcon fas icon="trash" />
-              </MDBBtn>
+  //             <MDBBtn  onClick={toggleShow} color='success' rounded size='sm'>
+  //               <MDBIcon far icon="edit" />
+  //             </MDBBtn>
+  //             &nbsp;&nbsp;
+  //             <MDBBtn color='danger' rounded size='sm'>
+  //               <MDBIcon fas icon="trash" />
+  //             </MDBBtn>
 
-            </td>
-          </tr>
+  //           </td>
+  //         </tr>
 
-        })
-        console.log("result api", ApiList);
-        setapiData(ApiList)
-      })
-  }, [])
-  console.log("api", apiData);
+  //       })
+  //       console.log("result api", ApiList);
+  //       setapiData(ApiList)
+  //     })
+  // }, [])
+  // console.log("api", apiData);
   return (
     <div>
       {/* <h1 className="text-center underline">Users management</h1> */}
@@ -53,7 +54,7 @@ const UsersAdmin = () => {
           </tr>
         </MDBTableHead>
         <MDBTableBody>
-          {apiData}
+          {/* {apiData} */}
           <MDBBtn onClick={toggleShow}>LAUNCH DEMO MODAL</MDBBtn>
           <MDBModal className='shadow-custom' show={basicModal} setShow={setBasicModal} tabIndex='-1'>
             <MDBModalDialog size="lg">
