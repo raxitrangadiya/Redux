@@ -36,7 +36,7 @@ const VendorRegister = () => {
         else {
             showToastMessage()
             setTimeout(() => {
-                navigate("/login")
+                navigate("/vendorlogin")
             }, 1500)
         }
         console.log("registerationwithRollid", registerationwithRollid.role_id);

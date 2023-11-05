@@ -8,9 +8,9 @@ const CustomHooks = (intval, initError) => {
         setInput((inp) => ({ ...inp, [e.target.name]: e.target.value }))
         console.log("handlechanges", inp);
         // error msg
-        if (e.target.classname == "required") {
+        if (e.target.classname === "required") {
             console.log("called inside if ", e.target.value);
-            if (e.target.value == "") {
+            if (e.target.value === "") {
                 let SpanId = [e.target.name] + "Error";
                 console.log("spanid", SpanId);
                 setError({ ...errors, [SpanId]: "this field is required" })
@@ -20,10 +20,11 @@ const CustomHooks = (intval, initError) => {
             }
         }
     }
-    const PostData=(e)=>{
-        setInput((inp)=>({...inp,[e.target.name]:e.target.value}))
+    const updateData=(data)=>{
+        setInput(data)
     }
-    return {handleChange, inp, errors,PostData}  
+ 
+    return {handleChange, inp, errors,updateData,}  
 };
 
 export default CustomHooks;

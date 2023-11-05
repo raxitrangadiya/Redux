@@ -1,4 +1,4 @@
-import { RETRIVE_ALL_LOGIN, RETRIVE_ALL_USERS ,RETRIVE_ALL_REGISTER} from '../action/type.jsx'
+import { RETRIVE_ALL_LOGIN, RETRIVE_ALL_USERS ,RETRIVE_ALL_REGISTER,DELETE_USER,PATCH_USER,PUT_USER} from '../action/type.jsx'
 const initialState = {};
 const usersReducer = (users = initialState, action) => {
     const { type, payload } = action
@@ -11,6 +11,15 @@ const usersReducer = (users = initialState, action) => {
             return { ...payload }
         case RETRIVE_ALL_REGISTER:
             console.log("RETRIVE_ALL_REGISTER");
+            return { ...payload }
+        case DELETE_USER:
+            console.log("DELETE_USER");
+            return { ...payload }
+        case PATCH_USER:
+            console.log("PATCH_USER called");
+            return { ...payload }
+        case PUT_USER:
+            console.log("PUT_USER");
             return { ...payload }
         default:
             return users

@@ -4,25 +4,26 @@ import './adminlayoutnew.css'
 import { MDBBtn } from 'mdb-react-ui-kit';
 const AdminLayout = () => {
     const [aside, setasie] = useState(false)
-    const btnclick = () => {
+    const tooglerbtn = () => {
         setasie(!aside)
     }
     return (
     
         <>
             <aside id="sidebar" className={aside ? "sidebaractive" : ""}>
-                <nav id="sidebarMenu" className="toggle collapse d-lg-block sidebar collapse ">
+                <nav id="sidebarMenu" className="toggle collapse d-block sidebar collapse ">
                     <div className="position-sticky">
                         <div className=" list-group list-group-flush mx-3 mt-4">
-                            <Link to="admindashboard" className="list-group-item list-group-item-action  ripple" aria-current="true">
-                                <i className="fas fa-tachometer-alt fa-fw me-3"></i><span> Dashboard</span>
+                            <Link to="admindashboard" className="list-group-item list-group-item-action py-2 ripple" >
+                                <i className="fas fa-tachometer-alt fa-fw me-3 "></i><span className='d-none d-sm-inline'> Dashboard</span>
                             </Link>
                             <Link to="users" className="list-group-item list-group-item-action py-2 ripple">
-                                <i className="fa-solid fa-user fa-fw me-3"></i><span>Users</span>
+                                <i className="fa-solid fa-user fa-fw me-3"></i><span className='d-none d-sm-inline'>Users</span>
                             </Link>
-                            <Link to="productmanage" className="list-group-item list-group-item-action py-2 ripple"><i className="fas fa-lock fa-fw me-3"></i><span>Product</span></Link>
+                        
+                            <Link to="productmanage" className="list-group-item list-group-item-action py-2 ripple"><i className="fas fa-lock fa-fw me-3"></i><span className='d-none d-sm-inline'>Product</span></Link>
                             <Link to="productreview" className="list-group-item list-group-item-action py-2 ripple">
-                                <i className="fas fa-chart-pie fa-fw me-3"></i><span>Review</span>
+                                <i className="fas fa-chart-pie fa-fw me-3"></i><span className='d-none d-sm-inline'>Review</span>
                             </Link>
 
 
@@ -35,7 +36,7 @@ const AdminLayout = () => {
                 <header className='hedaer'>
                     <div className="d-flex align-items-center">
                         <div className="col">
-                            <h2 id="btnclick" onClick={btnclick} className=' p-2 mb-0'><i className={aside ? "fa-solid fa-times" : "fa-solid fa-bars"}></i></h2>
+                            <h2 id="btnclick" onClick={tooglerbtn} className=' p-2 mb-0'><i className={aside ? "fa-solid fa-times" : "fa-solid fa-bars"}></i></h2>
                         </div>
                         <div className="col ">
                             <div className="d-flex align-items-center justify-content-between">

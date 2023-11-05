@@ -28,7 +28,7 @@ const showToastMessagefailed  = () =>{
   const { handleChange, inp } = CustomHooks()
   const Registration = async () => {
     console.log("input ", inp);
-    const registerationwithRollid = { ...inp, role_id: 3 }
+    const registerationwithRollid = { ...inp, role_id: 2 }
     let RegistrationData = await dispatch(RegisterUsers(registerationwithRollid))
     if (inp == undefined) {
       showToastMessagefailed()
@@ -77,16 +77,16 @@ const showToastMessagefailed  = () =>{
 
 
                         <div className="form-outline mb-4">
-                          <MDBInput name="username" onChange={handleChange} label='Username' id='typeText' type='text' />
+                          <MDBInput name="username" className='required' onChange={handleChange} label='Username' id='typeText' type='text' />
                         </div>
                         <div className="form-outline mb-4">
-                          <MDBInput name="mobile" onChange={handleChange} label='Mobile no' id='number' type='mobile' />
+                          <MDBInput name="mobile" className='required' onChange={handleChange} label='Mobile no' id='number' type='mobile' />
                         </div>
                         <div className="form-outline mb-4">
-                          <MDBInput name='email' onChange={handleChange} label='Email' id='email' type='email' />
+                          <MDBInput name='email' className='required' onChange={handleChange} label='Email' id='email' type='email' />
                         </div>
                         <div className="form-outline mb-4">
-                          <MDBInput name='password' onChange={handleChange} label='Password' id='password' type='password ' /><span></span>
+                          <MDBInput name='password' className='required' onChange={handleChange} label='Password' id='password' type='password ' /><span></span>
                         </div>
                         <div className="pt-1 mb-4">
                           <MDBBtn className="btn btn-dark btn-lg btn-block" onClick={Registration} type="button"> Register</MDBBtn>

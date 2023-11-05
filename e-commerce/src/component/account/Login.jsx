@@ -28,9 +28,11 @@ const Login = () => {
     if (responce.payload.data[0].role_id==1) {
       setTimeout(() => {
         navigate("/admin/dashboard/admindashboard")
-    }, 1500);
-  } else {
-    setTimeout(() => {
+      }, 1500);
+    } else {
+      setTimeout(() => {
+      setcookies('username',responce.payload.data[0].username)
+      setcookies('id',responce.payload.data[0].id)
       navigate("/")    
   }, 1500);
   }
