@@ -28,7 +28,7 @@ console.log("aa",Update);
   // data print in table START
   const getData = async () => {
     const getResponce = await dispatch(retriveUsers())
-    console.log("users", getResponce);
+    console.log("get data", getResponce);
     const alluserList = (getResponce.payload.data).map((val, key) => {
       return <tr key={key}>
         <td>{key}</td>

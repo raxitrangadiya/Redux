@@ -25,7 +25,7 @@ const Login = () => {
     let responce= await dispatch(loginUsers(inp.username,inp.password))
     let getdata =responce.payload.data[0]
     showToastMessage()
-    if (responce.payload.data[0].role_id==1) {
+    if (responce.payload.data[0].role_id="1") {
       setTimeout(() => {
         navigate("/admin/dashboard/admindashboard")
       }, 1500);

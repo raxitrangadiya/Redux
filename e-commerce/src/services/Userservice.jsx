@@ -1,30 +1,34 @@
-import httpreq from './http-comman.jsx'
+import jsonapi from './http-comman.jsx'
+import FakeProduct from './Product.jsx'
 const getUserlogin=(username,password)=>{
     console.log("called inside user services");
-return httpreq.get(`users?username=${username}&password=${password}`)
+return jsonapi.get(`users?username=${username}&password=${password}`)
 }
 const Userregis=(registerationwithRollid)=>{
     console.log("called inside user services");
-return httpreq.post("users",registerationwithRollid)
+return jsonapi.post("users",registerationwithRollid)
 }
 const getAll=()=>{
-return httpreq.get("users")
+return jsonapi.get("users")
 }
 const Users=(id)=>{
     console.log("users",Users);
-return httpreq.get(`users/${id}`)
+return jsonapi.get(`users/${id}`)
 }
 const deleteUserbyid=(id)=>{
     console.log("deleteUser",deleteUserbyid);
-return httpreq.delete(`users/${id}`)
+return jsonapi.delete(`users/${id}`)
 }
 const patchUsersbyid=(id)=>{
     console.log("patch from action",patchUsersbyid);
-return httpreq.patch(`users/${id}`)
+return jsonapi.patch(`users/${id}`)
 }
 const PutUsersbyid=(id,inp)=>{
     console.log("put from action",PutUsersbyid);
-return httpreq.put(`users/${id}`,inp)
+return jsonapi.put(`users/${id}`,inp)
+}
+const trialProduct=()=>{
+return FakeProduct.get("products")
 }
 const UserService ={
     getAll,
@@ -34,5 +38,6 @@ const UserService ={
     patchUsersbyid,
     PutUsersbyid,
     Users,
+    trialProduct,
 }
 export default  UserService 

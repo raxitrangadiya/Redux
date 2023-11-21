@@ -98,6 +98,30 @@
       "password": "123",
       "role_id": 2,
       "id": 16
+    },
+    {
+      "username": "nikhil",
+      "mobile": "9408850306",
+      "email": "nikhil@gmail.com",
+      "password": "2214",
+      "role_id": 3,
+      "id": 17
+    },
+    {
+      "username": "rizaryv",
+      "mobile": "373",
+      "email": "gypi@mailinator.com",
+      "password": "Eius eos molestiae ",
+      "role_id": 2,
+      "id": 18
+    },
+    {
+      "username": "niru",
+      "mobile": "6354060865",
+      "email": "nn@rangaduya",
+      "password": "1",
+      "role_id": 2,
+      "id": 19
     }
   ]
 }

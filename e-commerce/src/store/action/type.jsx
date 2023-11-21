@@ -5,3 +5,4 @@
  export const DELETE_USER="DELETE_USER"
  export const PATCH_USER="PATCH_USER"
  export const PUT_USER="PUT_USER"
+ export const FAKE_API="FAKE_API"

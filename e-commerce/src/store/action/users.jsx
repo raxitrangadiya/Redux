@@ -32,3 +32,8 @@ export const PutUser = (id,inp)=>async (dispatch)=>{
     console.log("put user:", ResData.data);
     return dispatch({type : "PUT_USER" , payload : ResData})
 }
+export const trialProduct = ()=>async (dispatch)=>{
+    const ResData = await UserService.trialProduct();
+    console.log("trialProduct:", ResData.data);
+    return dispatch({type : "FAKE_API" , payload : ResData})
+}

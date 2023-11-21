@@ -34,12 +34,12 @@ console.log(apidata);
 useEffect(()=>{
     // navUser()
 },[])
-const  navUser=async()=>{
-    let responce =await dispatch(Users(cookies.id))
-    console.log("responce",responce.payload.data.username);
-    // setapiData(responce.payload.data)
-}
-navUser()
+// const  navUser=async()=>{
+//     let responce =await dispatch(Users(cookies.id))
+//     console.log("responce",responce.payload.data.username);
+//     // setapiData(responce.payload.data)
+// }
+// navUser()
 
     return (
         <MDBNavbar expand='lg' light className='text-light' bgColor='light'>
@@ -59,12 +59,12 @@ navUser()
                     <MDBNavbarNav className='mr-auto mb-2 mb-lg-0'>
                         <MDBNavbarItem>
                             <MDBNavbarLink active aria-current='page' href='#'>
-                                <Link className='text-dark' to="/"></Link>
+                                <Link className='text-dark' to="/">Home</Link>
                             </MDBNavbarLink>
                         </MDBNavbarItem>
                         <MDBNavbarItem>
                             <MDBNavbarLink>
-                                <Link className='text-dark' to='/category'>Category</Link>
+                                <Link className='text-dark' to='/'>Category</Link>
                                 </MDBNavbarLink>
                         </MDBNavbarItem>
 

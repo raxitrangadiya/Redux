@@ -2,8 +2,7 @@ import React, { Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import Navbar from '../commancomponent/Navbar.jsx'
 import Home from '../store/pages/Home';
-import Category from '../component/category/Category.jsx';
-import Accessstoredata from '../store/pages/AccessStoreData'
+// import Accessstoredata from '../store/pages/AccessStoreData'
 import Login from '../component/account/Login';
 import Register from '../component/account/Register.jsx';
 import VendorLogin from '../component/account/VendorLogin.jsx';
@@ -20,10 +19,10 @@ const MainRouter = createBrowserRouter([
         path: "/",
         element: <><Navbar /><Home /></>
     },
-    {
-        path: "/accessapi",
-        element: <><Navbar /><Accessstoredata /></>
-    },
+    // {
+    //     path: "/accessapi",
+    //     element: <><Navbar /><Accessstoredata /></>
+    // },
     {
         path: "/login",
         element: <Login />
